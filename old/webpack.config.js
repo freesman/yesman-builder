@@ -1,8 +1,15 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+//var rimraf = require('rimraf');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var mode = process.env.mode || 'development';
+
+function addHash(template, hash){
+  return mode != 'development' ?
+    template.replace(/\.[^.]+$/, `.[${hash}]$&`) : template;
+}
 
 module.exports = {
   context: path.join(__dirname, 'app'),
@@ -15,10 +22,11 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
-  	filename: '[name].js',
+    path: mode == 'development' ? path.join(__dirname, 'dist') : path.join(__dirname, 'public'),
+    //publicPath: '/dist/',
+  	filename: addHash('[name].js', 'chunkhash:6'),
     library: '[name]',
-    chunkFilename: '[id].[name].js',
+    chunkFilename: addHash('[id].[name].js', 'chunkhash:6')
   },
 
   module:{
@@ -27,23 +35,23 @@ module.exports = {
       {test: /\.jade$/, loader: 'jade'},
       {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 versions')},
       {test: /\.styl$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 versions!stylus?resolve url')},
-      {test: /\.(png|jpg|svg|ttf)$/, loader:'url?name=[path][name].[ext]&limit=4096',}
+      {test: /\.(png|jpg|svg|ttf)$/, loader: addHash('url?name=[path][name].[ext]&limit=4096', 'hash:6')}
     ]
   },
 
-  watch: true,
+  watch: mode == 'development',
 
   watchOptions: {
     aggregateTimeout: 100
   },
 
-  devtool: 'eval',
+  devtool: mode == 'development' ? 'eval' : null,
 
   noParse: wrapRegexp(/\/node_modules\/(jquery)/),
 
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('[name].css', {allChunks: true}),
+    new ExtractTextPlugin(addHash('[name].css', 'contenthash:6'), {allChunks: true}),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'default.jade',
@@ -86,4 +94,16 @@ function wrapRegexp(regexp, label){
     return RegExp.prototype.test.call(this, path);
   };
   return regexp;
+}
+
+if (mode != 'development'){
+  module.exports.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true,
+        unsafe: true
+      }
+    })
+  );
 }
