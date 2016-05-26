@@ -1,0 +1,34 @@
+{
+  "name": "BD-studio",
+  "version": "1.0.0",
+  "description": "Black diamond studio website",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot"
+  },
+  "dependencies": {
+    "imports-loader": "^0.6.5",
+    "jquery": "*",
+    "snapsvg": "^0.4.0",
+    "webpack": "*"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "*",
+    "coffee-loader": "*",
+    "coffee-script": "*",
+    "copy-webpack-plugin": "^3.0.0",
+    "css-loader": "*",
+    "extract-text-webpack-plugin": "*",
+    "file-loader": "*",
+    "html-webpack-plugin": "*",
+    "jade": "*",
+    "jade-loader": "*",
+    "style-loader": "*",
+    "stylus": "*",
+    "stylus-loader": "*",
+    "url-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "author": "freesman <freesmanfreezil@gmail.com> (https://github.com/freesman)",
+  "license": "no license"
+}

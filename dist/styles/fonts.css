@@ -1,0 +1,19 @@
+@font-face {
+  font-family: stainy;
+  src: url(fonts/stainy.ttf);
+}
+
+@font-face {
+  font-family: museoBold;
+  src: url(fonts/museoBold.otf);
+}
+
+@font-face {
+  font-family: museoMedium;
+  src: url(fonts/museoMedium.otf);
+}
+
+@font-face {
+  font-family: museoLight;
+  src: url(fonts/museoLight.otf);
+}

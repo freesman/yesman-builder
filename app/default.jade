@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title title
+    link(rel='stylesheet' href='styles/normalize.css')
+    link(rel='stylesheet' href='styles/fonts.css')
+    link(rel='stylesheet' href='styles/fancybox/jquery.fancybox.css')
+  body
+    .header
+      include ./header/header.jade
+    section.content
+      include ./content/content
+      .head
+        include ./content/head/head
+      .profit
+        include ./content/profit/profit
+      .price
+        include ./content/price/price
+      .circle
+        include ./content/circle/circle
+      .gallery
+        include ./content/gallery/gallery
+      .contacts
+        include ./content/contacts/contacts
+    footer.footer
+      include ./footer/footer

@@ -1,0 +1,56 @@
+.header
+  position relative
+  width 1200px
+  height 50px
+  padding-top 1px
+  margin 0 auto
+  font-size 12px
+  font-family museoMedium
+  text-transform uppercase
+  &--logo
+    position absolute
+    text-decoration none
+    color #000000
+    height 20px
+    width 130px
+    top 15px
+    left 10px
+    line-height 25px
+    padding-left 29px
+  &--logo:before
+    content ''
+    position absolute
+    height 26px
+    width 26px
+    left 0
+    top -1px
+    transform rotate(-30deg)
+    background-image url('../img/diamond.svg')
+    background-size 24px
+    background-repeat no-repeat
+  &--number
+    position absolute
+    background-image url('../img/phone.svg')
+    background-size 12px
+    background-repeat no-repeat
+    width 109px
+    height 20px
+    right 0
+    top 20px
+    padding-left 21px
+  &--menu
+    margin 0 auto
+    margin-top 19px
+    width 560px
+    padding-left 17px
+  &--menu-item
+    display inline-block
+    text-decoration none
+    margin-right 6px
+    margin-right 68px
+    padding-bottom 4px
+    color #000000
+    &.__no-margin
+      margin-right 0
+  &--menu-item:hover
+    border-bottom 3px solid #6a8fd0

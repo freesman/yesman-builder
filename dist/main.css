@@ -1,0 +1,66 @@
+.header {
+  position: relative;
+  width: 1200px;
+  height: 50px;
+  padding-top: 1px;
+  margin: 0 auto;
+}
+.header--logo {
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAAVCAMAAABYDMEdAAAAqFBMVEVMaXEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARyDi1AAAAN3RSTlMAZsyqECLud7tEmTOIVd2ulE7DOAa3ixe+hrPJIKKmYhxbSQIT525pLZxAfdFx1/XqgiMKJ/iPVQTBCwAAAqdJREFUeF7Fldly2zgQRS/WxsJdovbdkvcltpL0///ZhJBlOlOVqcyLfF7A6sblAQtdRZw51rO7bdzji4hh9no4qHJav+HyLEbfyjHum209nZVVjcui6fFlNSuncT15w2bJE1wU3yxpNt7XVVsW83X7s7rDJRk//8RTdQXgKs74kON1iksy+DEaLq8B4LZaBQWoG1ySm8bdlvfAeCpHi+8TfWzrvkm/MIAXSGgyp8W57im1CAAEEeXAqYSYaob0x7MILvPd+r6pDxxXIlRK6+v5MgKbyWLTDno/BwrWgBwSwmadXrrcB6vBHtqmtzhHmSwiuhIQUtGzAKC4KxTCkxWA44i06RRIxsH2papbt0unaQcDt/jk94CkD7/LLACnAECnbqZODQKQFToFtE1VYgkYywbC6nQeA2dlyvUBP9H7l2e1HiJR1rt2/5vfWH/2G9ZFDs3xo+ut6f2wefILaVgDpAqPLLCHFOgIGRzJrMv1gadqPDoc7vHO3Xq7Gn7y/6LQZz8pUIDnT92A3g9Hya8ISqTZCbBR+lQEQA6OYjpkH1g25ejtab69QuL14XqEni4Z1NkvFQXWkfUfvl8mv+aMnOxqmjulwGlGkCk4AlnNvg80fH0E6nk1RocIo5t/+T2/+6MlokKgoL6rQu+PbLoSSSJi09WCzdNyGphCpH1Ose8D8aEtbxYYr5p0B7u2rP/0/Vk43YGwHjAqDZth/+7XeZEB59tWBOdhCAgEYwnQSiJptWXfB4DvQjXVAGtJV8Dt8zzi9/tXBtStVOQATJpn6ThLfpBMfmZOXvZp9iCKj1sPQJSFs0qf/MjZ94GO4yBrZttdebfA/vC4+Zt/hsf/w3iN/2K/LmdV8+ghJ0N8DYNp+YMfmhW+jE29/MZTfCHDW9rhkvwDd0o3l7MI5SYAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 130px;
+  top: 14px;
+  left: 10px;
+}
+.header--number {
+  position: absolute;
+  font-size: 12px;
+  font-family: museoMedium;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzguMTA2IDU3OC4xMDYiPjxwYXRoIGQ9Ik01NzcuODMgNDU2LjEyOGMxLjIyNSA5LjM4NS0xLjYzNSAxNy41NDUtOC41NjggMjQuNDhsLTgxLjM5NiA4MC43OGMtMy42NzIgNC4wOC04LjQ2NSA3LjU1Mi0xNC4zOCAxMC40MDUtNS45MTcgMi44NTctMTEuNzMgNC42OTMtMTcuNDQgNS41MDgtLjQwOCAwLTEuNjM1LjEwNi0zLjY3Ni4zMS0yLjAzNy4yMDMtNC42OS4zMDctNy45NTMuMzA3LTcuNzU0IDAtMjAuMy0xLjMyNi0zNy42NC0zLjk4cy0zOC41NTYtOS4xOC02My42NDYtMTkuNTgzYy0yNS4wOTUtMTAuNDA0LTUzLjU1Mi0yNi4wMTItODUuMzc1LTQ2LjgxOC0zMS44MjMtMjAuODA1LTY1LjY4OC00OS4zNjctMTAxLjU5Mi04NS42OC0yOC41Ni0yOC4xNTItNTIuMjI0LTU1LjA4LTcwLjk5Mi04MC43ODMtMTguNzY3LTI1LjcwNS0zMy44NjMtNDkuNDctNDUuMjg3LTcxLjMtMTEuNDI1LTIxLjgyNy0xOS45OTMtNDEuNjE1LTI1LjcwNS01OS4zNjNTNC41OSAxNzcuMzYyIDIuNTUgMTY0LjUxLS4zMDYgMTQxLjU2LjEwMiAxMzQuMjE2Yy40MDgtNy4zNDQuNjEyLTExLjQyNC42MTItMTIuMjQuODE2LTUuNzEyIDIuNjUyLTExLjUyNiA1LjUwOC0xNy40NDJzNi4zMjQtMTAuNzEgMTAuNDA0LTE0LjM4Mkw5OC4wMjIgOC43NTZjNS43MTItNS43MTIgMTIuMjQtOC41NjggMTkuNTg0LTguNTY4IDUuMzA0IDAgOS45OTYgMS41MyAxNC4wNzYgNC41OXM3LjU0OCA2LjgzNCAxMC40MDQgMTEuMzIybDY1LjQ4NCAxMjQuMjM2YzMuNjcyIDYuNTI4IDQuNjkyIDEzLjY2OCAzLjA2IDIxLjQyLTEuNjMyIDcuNzUyLTUuMSAxNC4yOC0xMC40MDQgMTkuNTg0bC0yOS45ODggMjkuOTg4Yy0uODE2LjgxNi0xLjUzIDIuMTQyLTIuMTQyIDMuOTc4cy0uOTE4IDMuMzY2LS45MTggNC41OWMxLjYzMiA4LjU2OCA1LjMwNCAxOC4zNiAxMS4wMTYgMjkuMzc2IDQuODk2IDkuNzkyIDEyLjQ0NCAyMS43MjYgMjIuNjQ0IDM1LjgwMnMyNC42ODQgMzAuMjkzIDQzLjQ1MiA0OC42NTNjMTguMzYgMTguNzcgMzQuNjggMzMuMzU0IDQ4Ljk2IDQzLjc2IDE0LjI3NyAxMC40IDI2LjIxNSAxOC4wNTMgMzUuODAzIDIyLjk1IDkuNTg4IDQuODk1IDE2LjkzMiA3Ljg1MyAyMi4wMyA4Ljg3bDcuNjUgMS41M2MuODE1IDAgMi4xNDQtLjMwNiAzLjk3OC0uOTE3IDEuODM3LS42MTMgMy4xNjMtMS4zMjYgMy45OC0yLjE0M2wzNC44ODMtMzUuNDk2YzcuMzQ4LTYuNTI2IDE1LjkxMi05Ljc5IDI1LjcwNS05Ljc5IDYuOTM4IDAgMTIuNDQzIDEuMjIzIDE2LjUyMyAzLjY3MmguNjEybDExOC4xMTUgNjkuNzY4YzguNTcgNS4zMDggMTMuNjcgMTIuMDM4IDE1LjMwMyAyMC4xOTh6IiBmaWxsPSIjMDEwMDAyIi8+PC9zdmc+);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  width: 109px;
+  height: 20px;
+  right: 0;
+  top: 20px;
+  padding-left: 21px;
+}
+.header--menu {
+  margin: 0 auto;
+  margin-top: 16px;
+  width: 560px;
+  padding-left: 17px;
+}
+.header--menu-item {
+  display: inline-block;
+  font-size: 12px;
+  font-family: museoMedium;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 6px;
+  margin-right: 68px;
+  padding-bottom: 4px;
+  color: #000;
+}
+.header--menu-item.__no-margin {
+  margin-right: 0;
+}
+.header--menu-item:hover {
+  border-bottom: 3px solid #6a8fd0;
+}
+.content--element {
+  color: #f00;
+}
+.content--element.__mod {
+  font-weight: bold;
+}
+.content--img {
+  width: 150px;
+  height: 150px;
+}
+.footer--my-text {
+  color: #008000;
+  font-family: stainy;
+}
